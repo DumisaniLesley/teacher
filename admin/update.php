@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<?php 
+include('../functions/newfunc.php');
+$id = $_GET['id'];
+
+
+$con=mysqli_connect("localhost","root","","hospitalms");
+$query = "select * from school where id='$id';";
+$result = mysqli_query($con,$query);
+while ($row = mysqli_fetch_array($result)){
+    $id = $row['id'];
+    $status = $row['status'];
+    session_start();
+    $_SESSION['id'] = $id;
+}
+
+if(isset($_POST['update']))
+{
+	$status=$_POST['status'];
+
+	$query="UPDATE school SET status='$status' WHERE id='$id';";
+	$result=mysqli_query($con,$query);
+	if($result) {
+        header("Location:../admin/schoolList.php");
+    } else {
+        echo 'something is not working';
+    }
+    
+}
+
+?>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" integrity="sha512-EaaldggZt4DPKMYBa143vxXQqLq5LE29DG/0OoVenoyxDrAScYrcYcHIuxYO9YNTIQMgD8c8gIUU8FQw7WpXSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <a class="navbar-brand" href="#"><i class="fa fa-hospital-o" aria-hidden="true"></i> Teacher Allocation
+            System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <style>
+        .bg-primary {
+            background: #F0F2F0;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #000C40, #F0F2F0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .col-md-4 {
+            max-width: 20% !important;
+        }
+
+        .list-group-item.active {
+            z-index: 2;
+            color: #fff;
+            background: #F0F2F0;
+            background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);
+            background: linear-gradient(to right, #000C40, #F0F2F0);
+            border-color: #c3c3c3;
+        }
+
+        .text-primary {
+            color: #342ac1 !important;
+        }
+
+        #cpass {
+            display: -webkit-box;
+        }
+
+        #list-app {
+            font-size: 15px;
+        }
+
+        .btn-primary {
+            background-color: #3c50c1;
+            border-color: #3c50c1;
+        }
+        </style>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="logout1.php" style="color: red; font-weight: bold;"><i class="fa fa-power-off"></i> Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</head>
+<style type="text/css">
+    button:hover {
+        cursor: pointer;
+    }
+
+    #inputbtn:hover {
+        cursor: pointer;
+    }
+</style>
+<body>
+    
+    <div class="container" style="margin-top: 200px; max-width: 800px;">
+<h2 class="tab-title text-center mb-4">Update Vacany Status</h2>
+    <form class="form-group" method="post" action="update.php">
+        <div class="row">
+            <div class="col-md-4"><label>Status:</label></div>
+            <div class="col-md-8">
+                <select name="status" class="form-control" id="status" required="required">
+                    <option value="" ><?php echo $status ;?>
+                    </option>
+                    <option value="vacant" >Vacant</option>
+                    <option value="not_vacant" >Not Vacant</option>
+                </select>
+                <br>
+                <input type="submit" name="update" value="Update Vacany Status" class="btn btn-block btn-primary">
+            </div><br><br>
+        </div>
+        <?php
+            echo $_GET['id'];
+        ?>
+    </form>
+    </div>
+</body>
+</html>
