@@ -18,4 +18,6 @@
 Username: admin
 Password: admin123
 
-
+**Student**
+Username: pamela@gmail.com
+Password: pam
