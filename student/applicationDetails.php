@@ -54,10 +54,46 @@ include('../includes/connect.php');
                             <td><?php echo $row['tp_number'];?></td>
                             <td><?php echo $row['school'];?></td>
                             <td><?php echo $row['status'];?></td>
-                            <td><?php echo $row['date'];?></td>
+                            <td>
+                                <?php 
+                                    $date = date_create($row['date']);
+                                    echo date_format($date, 'F jS, Y');
+                                ?>
+                            </td>
                         </tr>
                     <?php $cnt++; } ?>
                 </tbody>
             </table>
             <br>
+            <div>
+                <?php
+
+                    $query = "select * from applications where id ='$id';";
+                    $result = mysqli_query($con,$query);
+                    $row = mysqli_fetch_array($result);
+                    $status = $row['status'];
+                ?>
+            <?php 
+            
+                if($status == 'Approved'){
+                    echo 
+                    "<div class='d-flex justify-content-center'>
+                        <button class='btn btn-primary'>Download Recommendation Letter</button>
+                    </div
+                    ";
+                } else {
+                    echo 
+                    "<div class='text-center'>
+                        <div>
+                            <p'>Something Did not match the required requirements</p>
+                        </div>
+                        <a href='apply.php' class='btn btn-primary'>Re-Apply</a>
+                    </div
+                    ";
+                }
+            
+            ?>
+
+            </div>
         </div>
+        

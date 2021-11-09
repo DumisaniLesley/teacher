@@ -24,10 +24,9 @@ include('../includes/connect.php');
                 <tr>
                   <?php echo $email;?>
                     <th scope="col">#</th>
-                    <th scope="col">Introduction Letter</th>
-                    <th scope="col">Grade 12 Certificate</th>
-                    <th scope="col">NRC</th>
-                    <th scope="col">School of Choice</th>
+                    <th scope="col">Date of Application</th>
+                    <th scope="col">TP Number</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -39,14 +38,18 @@ include('../includes/connect.php');
                     while ($row = mysqli_fetch_array($result)){ ?>
                         <tr>
                             <td><?php echo $cnt;?></td>
-                            <td><?php echo $row['letter'];?></td>
-                            <td><?php echo $row['g12'];?></td>
-                            <td><?php echo $row['nrc'];?></td>
-                            <td><?php echo $row['school'];?></td>
+                            <td>
+                                <?php 
+                                    $date = date_create($row['date']);
+                                    echo date_format($date, 'F jS, Y');
+                                ?>
+                            </td>
+                            <td><?php echo $row['tp_number'];?> Teaching Practice</td>
+                            <td><?php echo $row['status'];?></td>
                             <td><a href="applicationDetails.php?id=<?php echo $row['id'];?>">Details</a></td>
                         </tr>
-                                <?php $cnt++; } ?>
-                            </tbody>
-                        </table>
-                        <br>
-                    </div>
+                    <?php $cnt++; } ?>
+                </tbody>
+            </table>
+            <br>
+        </div>

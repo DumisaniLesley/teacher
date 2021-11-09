@@ -8,11 +8,6 @@
 
 
 
-**Please download "TCPDF" for generating PDF, for now it has been removed from the project directory due to excessive file size**
-
-**TCPDF should be placed at the root directory of this project folder**
-
-
 **Admin Login Details**
 
 Username: admin

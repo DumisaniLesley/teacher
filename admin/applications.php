@@ -9,7 +9,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Student Email</th>
-                        <th scope="col">Chosen School</th>
+                        <th scope="col">School of Choice</th>
                         <th scope="col">T.P Number</th>
                         <th scope="col">Date of Application</th>
                         <th scope="col"></th>
