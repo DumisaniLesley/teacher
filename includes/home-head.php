@@ -85,12 +85,10 @@
                             <?php echo $username ?>
                         </p>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="nav-link" href="../student/editProfile.php?id=<?php echo $pid; ?>" style="color: black; font-weight: bold;">
+                            <a class="nav-link" href="../student/editProfile.php?id=<?php //echo $pid; ?>" style="color: black; font-weight: bold;">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a>
                             <a class="nav-link" href="../student/changePassword.php" style="color: black; font-weight: bold;">
                                 <i class="fa fa-key" aria-hidden="true"></i> Password</a>
-                            <a class="nav-link" href="../student/summary.php" style="color: black; font-weight: bold;">
-                                <i class="fa fa-book" aria-hidden="true"></i> Summary</a>
                             <a class="nav-link" href="../student/logout.php" style="color: red; font-weight: bold;">
                                 <i class="fa fa-power-off" aria-hidden="true"></i> Logout</a>
                         </div>

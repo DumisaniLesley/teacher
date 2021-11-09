@@ -25,7 +25,7 @@ if(isset($_POST['login'])){
 	}
   else {
     echo("<script>alert('Invalid Username or Password. Try Again!');
-          window.location.href = '../home.php';</script>");
+          window.location.href = '../student/login.php';</script>");
     // header("Location:error.php");
   }
 		
@@ -41,32 +41,5 @@ if(isset($_POST['update_data']))
 }
 
 
-
-
-// function display_docs()
-// {
-// 	global $con;
-// 	$query="select * from doctb";
-// 	$result=mysqli_query($con,$query);
-// 	while($row=mysqli_fetch_array($result))
-// 	{
-// 		$name=$row['name'];
-//     $cost=$row['docFees'];
-// 		echo '<option value="'.$name.'" data-price="' .$cost. '" >'.$name.'</option>';
-// 	}
-// }
-
-if(isset($_POST['doc_sub']))
-{
-  $doctorname=$_POST['doctorname'];
-	$doctor=$_POST['doctor'];
-  $dpassword=$_POST['dpassword'];
-  $demail=$_POST['demail'];
-  $docFees=$_POST['docFees'];
-	$query="insert into doctb(doctorname,username,password,email,docFees)values('$doctorname','$doctor','$dpassword','$demail','$docFees')";
-	$result=mysqli_query($con,$query);
-	if($result)
-		header("Location:adddoc.php");
-}
 
 ?>

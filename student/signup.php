@@ -26,7 +26,7 @@ if(isset($_POST['signup'])){
         $_SESSION['contact'] = $_POST['contact'];
         $_SESSION['college'] = $_POST['college'];
         $_SESSION['email'] = $_POST['email'];
-        header("Location:dashboard.php");
+        header("Location:login.php");
     } 
 
     $query1 = "select * from students;";

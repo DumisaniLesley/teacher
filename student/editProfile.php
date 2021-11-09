@@ -2,10 +2,8 @@
 <?php 
 //session_start();
 
-include('../functions/func.php');  
-include('../functions/newfunc.php');
-include('../application.php');
 include('../includes/connect.php');
+include('../functions/func.php');  
 
 
     $pid = $_SESSION['pid'];
