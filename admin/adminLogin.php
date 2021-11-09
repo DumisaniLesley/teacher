@@ -14,9 +14,7 @@ include("../includes/header.php");
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" type="text/css" href="../login.css">
-
-
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
     
   </head>
   <style type="text/css">

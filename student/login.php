@@ -15,7 +15,7 @@ include("../includes/header.php");
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" type="text/css" href="../style2.css">
-    <link rel="stylesheet" type="text/css" href="../login.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
 
 
     
@@ -63,7 +63,7 @@ include("../includes/header.php");
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">Sign in</button>
       <p>Don't have an Account? <a href="signup.php">Sign Up</a></p>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+      <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
 
 

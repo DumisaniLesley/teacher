@@ -16,6 +16,7 @@
     <style>
         body {
             overflow-x: hidden;
+            overflow-y: hidden;
         }
     .form-control {
         border-radius: 0.75rem;
@@ -53,11 +54,10 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <body style="background-color: white !important;">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-lightS fixed-top" id="mainNav" style="background-color: black !important;">
         <div class="container">
-
             <a class="navbar-brand js-scroll-trigger" href="#"
-                style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;">
+                style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif; color: white; font-weight: bold">
                 <h4><i class="fa fa-school-o" aria-hidden="true"></i>Teaching Practice Allocation System</h4>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -88,7 +88,7 @@
         <div class="row">
             <div class="col-md-6" style="margin-top: 180px; right: 5%">
                 <h3 class="text-center" style="font-weight: 900;">ABOUT</h3>
-                <p class="lead text-white text-center" style="font-weight: 500; line-height: 40px;">
+                <p class="lead text-dark text-center" style="font-weight: 500; line-height: 40px;">
                 The Teaching Practice Allocation system is a web-based system that will automate the processes that occur during the application for teaching practice by students from various colleges and university. The system will enable students to apply for teaching practice without going to the District Education Board (DEBS) offices thus saving money and time. 
                 </p>
                 <a href="student/signup.php" class="btn btn-primary btn-block">Get Started</a>
