@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 29, 2021 at 12:37 AM
+-- Generation Time: Nov 09, 2021 at 07:06 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -59,15 +59,16 @@ CREATE TABLE IF NOT EXISTS `applications` (
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `applications`
 --
 
 INSERT INTO `applications` (`id`, `letter`, `g12`, `nrc`, `license`, `school`, `s_email`, `tp_number`, `date`, `status`) VALUES
-(1, 'intro letter.docx', 'g12 certificate.pdf', 'nrc.pdf', 'sandbox.docx', 'Northrise Basic School', 'mimi@gmail.com', 'First TP', '2021-10-22 07:48:19', ''),
-(2, 'Question 2.docx', 'OOSAD Assignemt.docx', 'OO Sad Assignment2.docx', 'BIT250.docx', 'Northrise Basic School', 'mimi@gmail.com', 'Second TP', '2021-10-22 08:24:58', '');
+(1, 'intro letter.docx', 'g12 certificate.pdf', 'nrc.pdf', 'sandbox.docx', 'Northrise Basic School', 'mimi@gmail.com', 'First ', '2021-10-22 07:48:19', 'Rejected'),
+(2, 'Question 2.docx', 'OOSAD Assignemt.docx', 'OO Sad Assignment2.docx', 'BIT250.docx', 'Northrise Basic School', 'mimi@gmail.com', 'Second ', '2021-10-22 08:24:58', 'Rejected'),
+(4, 'cba.jpg', 'cba.jpg', 'sr.jpg', 'velinda chambatu.jpg', 'Northrise Basic School', 'pamela@gmail.com', 'First', '2021-11-09 15:47:11', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -204,17 +205,17 @@ CREATE TABLE IF NOT EXISTS `school` (
 --
 
 INSERT INTO `school` (`id`, `school_number`, `name`, `status`, `email`) VALUES
-(1, 101, 'Chifubu Secondary', 'not vacant', 'chifubu@gmail.com'),
-(6, 102, 'St Andrews High School', 'vacant', 'standrews@gmail.com'),
+(1, 101, 'Chifubu Secondary', 'Vacant', 'chifubu@gmail.com'),
+(6, 102, 'St Andrews High School', 'Vacant', 'standrews@gmail.com'),
 (7, 103, 'Northrise Basic School', 'vacant', 'northrise@gmail.com'),
-(8, 104, 'Masala Secondary', 'not vacant', 'masala@gmail.com'),
-(9, 106, 'Kansenshi Secondary', 'not vacant', 'kansenshi@gmail.com'),
+(8, 104, 'Masala Secondary', 'Vacant', 'masala@gmail.com'),
+(9, 106, 'Kansenshi Secondary', 'Vacant', 'kansenshi@gmail.com'),
 (10, 107, 'Kansenshi Primary', 'vacant', 'kansenshiprimary@gmail.com'),
 (11, 109, 'Temweni Secondary School', 'vacant', 'temweni@gmail.com'),
-(12, 108, 'Lubuto High School', 'not vacant', 'lubuto@gmail.com'),
+(12, 108, 'Lubuto High School', 'Vacant', 'lubuto@gmail.com'),
 (13, 110, 'Northrise Basic School', 'vacant', 'northrisebasic@gmail.com'),
 (14, 111, 'test high school', 'vacant', 'test@gmail.com'),
-(15, 112, 'Bethel Basic School', 'not vacant', 'bethel@gmail.com'),
+(15, 112, 'Bethel Basic School', 'Vacant', 'bethel@gmail.com'),
 (16, 113, 'Ndola Girls Technical School', 'vacant', 'ndolagirls@gmail.com'),
 (17, 113, 'Caritas High School', 'vacant', 'caritas@gmail.com');
 
