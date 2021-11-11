@@ -80,7 +80,7 @@ include('../includes/connect.php');
                     if($status == 'Approved'){
                         echo 
                         "<div class='d-flex justify-content-center'>
-                            <button class='btn btn-primary'>Download Recommendation Letter</button>
+                            <a href='../letter.php?id= $row[id] ' class='btn btn-primary'>Download Recommendation Letter</a>
                         </div
                         ";
                     } else {
