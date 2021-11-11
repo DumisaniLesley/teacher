@@ -18,6 +18,7 @@ include('../includes/connect.php');
 <?php include('../includes/home-head.php'); ?>
 
 <div class="container" style="margin-bottom: 10px; color: black; margin-top: 100px;">
+<div class="table-responsive">
     <h2 class="text-center " style="margin-bottom: 40px; color: black; margin-top: 70px;">APPLICATION HISTORY</h2>
         <table class="table table-hover table-stripped">
             <thead class="thead-light">
@@ -53,3 +54,4 @@ include('../includes/connect.php');
             </table>
             <br>
         </div>
+</div>
