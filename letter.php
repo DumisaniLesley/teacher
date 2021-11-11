@@ -30,23 +30,19 @@
     $dompdf = new Dompdf();
     //$page = file_get_contents("letter.html");
     $page = "
-        <h1 style='text-align: center;'>Introduction Letter</h1>
-        <div style='text-align: end'>
-            <p>$email</p>
-            <p>$school</p>
-            <p>$date</p>
-            <p>$name</p>
-            <p>$lname</p>
-            <p>$college</p>
-        </div>
-        
     
-        <br/>
-        <br/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga esse ut, quia in facere animi cupiditate debitis optio pariatur eum totam possimus odit iure aliquam, fugit impedit nihil autem blanditiis excepturi? Ex tempore voluptas inventore voluptates reprehenderit praesentium, delectus doloribus qui deleniti animi mollitia in eveniet quae minus velit nihil eius tempora quam a. Expedita, nemo itaque veniam labore necessitatibus repellat blanditiis facilis vel quaerat autem a illum, impedit doloremque totam dignissimos! Unde nisi mollitia natus quo magnam non praesentium quas corrupti cupiditate voluptatibus nobis optio beatae facilis est voluptas nemo, ea reiciendis quisquam perspiciatis dolorum quos? Doloremque, aperiam labore?</p>
-        <br/>
-        <h3 style='text-align: center;'>yours faithifully</h3>
-        <p style='text-align: center;'>Pamela</p>
+    
+        <div>
+            <h1 style='margin-bottom: 50px; text-align: center; margin-top: 30px;'>Introduction Letter</h1>
+            <div style='margin-left: 50px; margin-right: 50px;'>
+                <p style='text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum temporibus et corporis in velit? Eaque, quos. Reprehenderit, sed illo! Ab itaque voluptatibus non molestiae nobis architecto, nulla illum blanditiis ea totam vitae repellendus ipsa in, $name $lname voluptatum libero, excepturi reiciendis corrupti repellat facilis ratione. Itaque, a. Atque similique consequuntur corporis, commodi odio quasi! Deleniti assumenda sequi pariatur eaque, totam quas distinctio cumque aut unde quae repellendus $college consequuntur impedit tempora? Reprehenderit rem dolor, odio molestias sunt cum unde autem aut et molestiae $school debitis inventore illum assumenda ab quasi, earum officia ducimus magni recusandae, porro architecto soluta. In quaerat culpa odio quidem!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perferendis ad suscipit provident! Fuga accusantium dolore amet fugiat facere modi, quaerat odio voluptates nesciunt, suscipit eum, velit obcaecati quibusdam natus nulla facilis vel nemo ipsum aliquam. $date Doloremque fugiat, alias inventore excepturi repudiandae omnis ratione dicta voluptates, laboriosam distinctio provident aut?</p>
+                <p style='text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum temporibus et corporis $email in velit? Eaque, quos. Reprehenderit, sed illo! Ab itaque voluptatibus non molestiae nobis architecto, nulla illum blanditiis ea totam vitae repellendus ipsa in, voluptatum libero, excepturi reiciendis corrupti repellat facilis ratione. Itaque, a. Atque similique consequuntur corporis, </p>
+            </div>
+
+            <p style='text-align: center;'>Your faithifully</p>
+            <p style='text-align: center;'>DEBS Permanent Secretary</p>
+        </div>
     
     ";
     $dompdf->loadHtml($page);
