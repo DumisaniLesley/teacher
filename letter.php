@@ -35,13 +35,15 @@
         <div>
             <h1 style='margin-bottom: 50px; text-align: center; margin-top: 30px;'>Introduction Letter</h1>
             <div style='margin-left: 50px; margin-right: 50px;'>
-                <p style='text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum temporibus et corporis in velit? Eaque, quos. Reprehenderit, sed illo! Ab itaque voluptatibus non molestiae nobis architecto, nulla illum blanditiis ea totam vitae repellendus ipsa in, $name $lname voluptatum libero, excepturi reiciendis corrupti repellat facilis ratione. Itaque, a. Atque similique consequuntur corporis, commodi odio quasi! Deleniti assumenda sequi pariatur eaque, totam quas distinctio cumque aut unde quae repellendus $college consequuntur impedit tempora? Reprehenderit rem dolor, odio molestias sunt cum unde autem aut et molestiae $school debitis inventore illum assumenda ab quasi, earum officia ducimus magni recusandae, porro architecto soluta. In quaerat culpa odio quidem!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perferendis ad suscipit provident! Fuga accusantium dolore amet fugiat facere modi, quaerat odio voluptates nesciunt, suscipit eum, velit obcaecati quibusdam natus nulla facilis vel nemo ipsum aliquam. $date Doloremque fugiat, alias inventore excepturi repudiandae omnis ratione dicta voluptates, laboriosam distinctio provident aut?</p>
-                <p style='text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum temporibus et corporis $email in velit? Eaque, quos. Reprehenderit, sed illo! Ab itaque voluptatibus non molestiae nobis architecto, nulla illum blanditiis ea totam vitae repellendus ipsa in, voluptatum libero, excepturi reiciendis corrupti repellat facilis ratione. Itaque, a. Atque similique consequuntur corporis, </p>
+                <p style='text-align: center; line-height: 30px;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum temporibus et corporis in velit? Eaque, quos. Reprehenderit, sed illo! Ab itaque voluptatibus non molestiae nobis architecto, nulla illum blanditiis ea totam vitae repellendus ipsa in, <b>$name $lname</b> voluptatum libero, excepturi reiciendis corrupti repellat facilis ratione. Itaque, a. Atque similique consequuntur corporis, commodi odio quasi! Deleniti assumenda sequi pariatur eaque, totam quas distinctio cumque aut unde quae repellendus <b>$college</b> consequuntur impedit tempora? Reprehenderit rem dolor, odio molestias sunt cum unde autem aut et molestiae <b>$school</b> debitis inventore illum assumenda ab quasi, earum officia ducimus magni recusandae, porro architecto soluta. In quaerat culpa odio quidem!</p>
+
+                <p style='line-height: 30px;'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perferendis ad suscipit provident! Fuga accusantium dolore amet fugiat facere modi, quaerat odio voluptates nesciunt, suscipit eum, velit obcaecati quibusdam natus nulla facilis vel nemo ipsum aliquam. <b>$date</b> Doloremque fugiat, alias inventore excepturi repudiandae omnis ratione dicta voluptates, laboriosam distinctio provident aut?</p>
+
+                <p style='text-align: center; line-height: 30px;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum temporibus et corporis <b>$email</b> in velit? Eaque, quos. Reprehenderit, sed illo! Ab itaque voluptatibus non molestiae nobis architecto, nulla illum blanditiis ea totam vitae repellendus ipsa in, voluptatum libero, excepturi reiciendis corrupti repellat facilis ratione. Itaque, a. Atque similique consequuntur corporis, </p>
             </div>
 
-            <p style='text-align: center;'>Your faithifully</p>
-            <p style='text-align: center;'>DEBS Permanent Secretary</p>
+            <p style='text-align: center;'><b>Your faithifully</b></p>
+            <p style='text-align: center;'><b>DEBS Permanent Secretary</b></p>
         </div>
     
     ";
