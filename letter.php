@@ -56,6 +56,6 @@
     $dompdf->render();
 
     // Output the generated PDF to Browser
-    $dompdf->stream('result', array('Attachment'=>0));
+    $dompdf->stream('Letter', array('Attachment'=>0));
 
 ?>
