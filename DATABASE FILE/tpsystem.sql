@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 09, 2021 at 07:06 PM
+-- Generation Time: Jan 06, 2022 at 10:45 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -59,15 +59,16 @@ CREATE TABLE IF NOT EXISTS `applications` (
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `applications`
 --
 
 INSERT INTO `applications` (`id`, `letter`, `g12`, `nrc`, `license`, `school`, `s_email`, `tp_number`, `date`, `status`) VALUES
-(1, 'intro letter.docx', 'g12 certificate.pdf', 'nrc.pdf', 'sandbox.docx', 'Northrise Basic School', 'mimi@gmail.com', 'First ', '2021-10-22 07:48:19', 'Rejected'),
+(1, 'intro letter.docx', 'g12 certificate.pdf', 'nrc.pdf', 'sandbox.docx', 'Northrise Basic School', 'mimi@gmail.com', 'First ', '2021-10-22 07:48:19', 'Approved'),
 (2, 'Question 2.docx', 'OOSAD Assignemt.docx', 'OO Sad Assignment2.docx', 'BIT250.docx', 'Northrise Basic School', 'mimi@gmail.com', 'Second ', '2021-10-22 08:24:58', 'Rejected'),
+(5, 'Class Exercise.docx', 'Class Exercise.docx', 'Class Exercise.docx', 'Class Exercise.docx', 'Kansenshi Secondary', 'jane@gmail.com', 'First', '2021-11-09 21:44:34', 'Approved'),
 (4, 'cba.jpg', 'cba.jpg', 'sr.jpg', 'velinda chambatu.jpg', 'Northrise Basic School', 'pamela@gmail.com', 'First', '2021-11-09 15:47:11', 'Approved');
 
 -- --------------------------------------------------------
@@ -157,6 +158,26 @@ INSERT INTO `doctb` (`username`, `password`, `doctorname`, `email`, `spec`, `doc
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE IF NOT EXISTS `locations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `locations`
+--
+
+INSERT INTO `locations` (`id`, `name`) VALUES
+(1, 'Chichele');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `prestb`
 --
 
@@ -198,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `school` (
   `status` varchar(10) NOT NULL,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `school`
@@ -217,7 +238,8 @@ INSERT INTO `school` (`id`, `school_number`, `name`, `status`, `email`) VALUES
 (14, 111, 'test high school', 'vacant', 'test@gmail.com'),
 (15, 112, 'Bethel Basic School', 'Vacant', 'bethel@gmail.com'),
 (16, 113, 'Ndola Girls Technical School', 'vacant', 'ndolagirls@gmail.com'),
-(17, 113, 'Caritas High School', 'vacant', 'caritas@gmail.com');
+(17, 113, 'Caritas High School', 'vacant', 'caritas@gmail.com'),
+(18, 2415, 'Dominican Convent Girls ', 'vacant', 'convent@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -237,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `students` (
   `password` varchar(30) NOT NULL,
   `cpassword` varchar(30) NOT NULL,
   PRIMARY KEY (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `students`
@@ -264,7 +286,8 @@ INSERT INTO `students` (`pid`, `fname`, `lname`, `gender`, `email`, `contact`, `
 (18, 'Grace', 'Mint', 'Female', 'grace@gmail.com', '0978646664', 'Nkana College of Eduaction', 'grace', 'grace'),
 (19, 'Big', 'Marty', 'Male', 'big@gmail.com', '0978646664', 'Nkana College of Eduaction', 'big', 'big'),
 (20, 'Curtis', 'Hicks', 'Male', 'curtis@gmail.com', '7410000010', 'Zambia ICT College', 'pass', 'pass'),
-(21, 'Emily', 'Smith', 'Female', 'emily@gmail.com', '7896541222', 'Zambia ICT College', 'pass', 'pass');
+(21, 'Emily', 'Smith', 'Female', 'emily@gmail.com', '7896541222', 'Zambia ICT College', 'pass', 'pass'),
+(24, 'Jane ', 'Doe', 'Female', 'jane@gmail.com', '0977855411', 'TVTC', '1234', '1234');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

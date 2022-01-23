@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con=mysqli_connect("localhost","root","","hospitalms");
+$con=mysqli_connect("localhost","root","","tpsystem");
 
 if(isset($_POST['login'])){
 	$username=$_POST['username'];
